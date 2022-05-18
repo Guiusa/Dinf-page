@@ -1,0 +1,12 @@
+body {
+    background-color: #303030;
+    color: white;
+}
+.ola {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    border-bottom: solid #F27D24 5px;
+    border-radius: 90%;
+    margin-bottom: 20px;
+}
