@@ -1,11 +1,15 @@
 body {
-    background-color: #303030;
+    background-color: black;
+    /* background-color: #303030; */
     padding: 0;
     margin: 0;
     color: white;
 }
 .p5Canvas {
-    display: block;
+    min-height: 100vw;
+    min-width: 100vw;
+    max-height: 100vw;
+    max-width: 100vw;
     margin-left: auto;
     margin-right: auto;
 }

@@ -1,8 +1,9 @@
 var toruses = [];
 var ang = 0;
+var K = 500;
 function setup() {
   angleMode(DEGREES);
-  createCanvas(1080, 1080, WEBGL);
+  createCanvas(5000, 5000, WEBGL);
   noStroke();
   
   for(var i=0; i<10; i++){
@@ -19,6 +20,12 @@ function setup() {
 }
 
 function draw() {
+  if(mouseIsPressed){
+    K = sin(ang)*700;
+  }
+  fill(0);
+  ellipsoid(K);
+  fill(255, 255, 100);
   background(0);
   rotateX(ang);
   rotateZ(ang/2);
@@ -27,11 +34,8 @@ function draw() {
     rotateX(toruses[i][0]);
     rotateY(toruses[i][1]);
     rotateZ(toruses[i][2]);
-    torus(500, 3);
+    torus(2200, 20, 100);
     pop();
   }
-  fill(0);
-  ellipsoid(150);
-  fill(255, 255, 100);
   ang++;
 }
