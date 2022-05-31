@@ -1,41 +1,39 @@
-var toruses = [];
-var ang = 0;
-var K = 500;
-function setup() {
-  angleMode(DEGREES);
-  createCanvas(5000, 5000, WEBGL);
-  noStroke();
-  
-  for(var i=0; i<10; i++){
-    var torus = [];
-    torus[0] = random(0, 360);
-    torus[1] = random(0, 360);
-    torus[2] = random(0, 360);
-    toruses[i] = torus;
+new p5(function (k) {
+  var toruses = [];
+  var ang = 0;
+  k.setup = function () {
+    k.angleMode(k.DEGREES);
+    k.createCanvas(1080, 1080, k.WEBGL);
+    k.noStroke();
+    
+    for(var i=0; i<10; i++){
+      var torus = [];
+      torus[0] = k.random(0, 360);
+      torus[1] = k.random(0, 360);
+      torus[2] = k.random(0, 360);
+      toruses[i] = torus;
+    }
+
+    k.fill(0);
+    k.ellipsoid(150);
+    k.fill(255, 255, 100);
   }
 
-  fill(0);
-  ellipsoid(150);
-  fill(255, 255, 100);
-}
-
-function draw() {
-  if(mouseIsPressed){
-    K = sin(ang)*700;
+  k.draw = function () {
+    k.fill(0);
+    k.ellipsoid(150);
+    k.fill(255, 255, 100);
+    k.background(0);
+    k.rotateX(ang);
+    k.rotateZ(ang/2);
+    for(var i=0; i<10; i++){
+      k.push();
+      k.rotateX(toruses[i][0]);
+      k.rotateY(toruses[i][1]);
+      k.rotateZ(toruses[i][2]);
+      k.torus(400, 5, 24);
+      k.pop();
+    }
+    ang++;
   }
-  fill(0);
-  ellipsoid(K);
-  fill(255, 255, 100);
-  background(0);
-  rotateX(ang);
-  rotateZ(ang/2);
-  for(var i=0; i<10; i++){
-    push();
-    rotateX(toruses[i][0]);
-    rotateY(toruses[i][1]);
-    rotateZ(toruses[i][2]);
-    torus(2200, 20, 100);
-    pop();
-  }
-  ang++;
-}
+}, "orbit");
