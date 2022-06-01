@@ -6,7 +6,7 @@ new p5(function (k) {
     k.createCanvas(1080, 1080, k.WEBGL);
     k.noStroke();
     
-    for(var i=0; i<10; i++){
+    for(var i=0; i<6; i++){
       var torus = [];
       torus[0] = k.random(0, 360);
       torus[1] = k.random(0, 360);
@@ -26,14 +26,14 @@ new p5(function (k) {
     k.background(0);
     k.rotateX(ang);
     k.rotateZ(ang/2);
-    for(var i=0; i<10; i++){
-      k.push();
+    k.push();
+    for(var i=0; i<6; i++){
       k.rotateX(toruses[i][0]);
       k.rotateY(toruses[i][1]);
       k.rotateZ(toruses[i][2]);
       k.torus(400, 5, 24);
-      k.pop();
     }
+    k.pop();
     ang++;
   }
 }, "orbit");
