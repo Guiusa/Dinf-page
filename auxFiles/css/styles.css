@@ -23,8 +23,8 @@ body {
         justify-content: center;
     }
     .p5Canvas {
-        max-width: 33vw;
-        max-height: 33vw;
+        max-width: 32vw;
+        max-height: 32vw;
         margin-top: 0;
     }
 }
