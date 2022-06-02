@@ -3,7 +3,7 @@ new p5(function (k) {
     k.setup = function () {
         k.createCanvas(1080, 1080);
         k.noStroke();
-        k.fill(255, 255, 100);
+        k.fill(127, 255, 0);
     };
     k.draw = function () {
         k.background(0);

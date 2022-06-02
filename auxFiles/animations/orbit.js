@@ -16,13 +16,13 @@ new p5(function (k) {
 
     k.fill(0);
     k.ellipsoid(150);
-    k.fill(255, 255, 100);
+    k.fill(127, 255, 0);
   }
 
   k.draw = function () {
     k.fill(0);
     k.ellipsoid(150);
-    k.fill(255, 255, 100);
+    k.fill(127, 255, 0);
     k.background(0);
     k.rotateX(ang);
     k.rotateZ(ang/2);
