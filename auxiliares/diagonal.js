@@ -8,11 +8,9 @@ new p5(function (k) {
         let pointSeed = k.round(k.random(0, 1));
         wallPoint = (pointSeed) ? [k.round(k.random(0, 1)) ? 0 : 1080, k.round(k.random(0, 1080))] : [k.round(k.random(0, 1080)), k.round(k.random(0, 1)) ? 0 : 1080];
         vetor = [k.sin(vetorSeed)*pace, k.cos(vetorSeed)*pace];
+        
+        vetor = [((wallPoint[0] + vetor[0] <= 0 || wallPoint[0] + vetor[0] >= 1080) ? -vetor[0] : vetor [0]), ((wallPoint[1] + vetor[1] <= 0 || wallPoint[1] + vetor[1] >= 1080) ? -vetor[1] : vetor [1])];
         currentPoint = [wallPoint[0] + vetor[0], wallPoint[1] + vetor[1]]; 
-        if((currentPoint[0] <= 0 || currentPoint[0] >= 1080) || (currentPoint[1] <= 0 || currentPoint[1] >= 1080)){
-            wallPoint = currentPoint;
-        }
-
 
         k.createCanvas(1080, 1080);
         k.background(255, 255, 100);

@@ -5,13 +5,25 @@ body {
     margin: 0;
     color: white;
 }
+.p5Canvas {
+    max-width: 80vw;
+    max-height: 80vw
+}
 .CanvasC {
     margin: 10px 0 10px 0;
     display: flex;
-    flex-direction: collumns;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
-.p5Canvas {
-    max-width: 30vw;
-    max-height: 30vw;
+
+@media(min-width: 360px){
+    .CanvasC {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .p5Canvas {
+        max-width: 30vw;
+        max-height: 30vw;
+    }
 }
