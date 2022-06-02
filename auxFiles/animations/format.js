@@ -29,4 +29,4 @@ new p5(function (k) {
        
         counter++;
     }
-}, 'animationTester');
+}, 'format');
