@@ -13,7 +13,7 @@ new p5(function (k) {
         currentPoint = [wallPoint[0] + vetor[0], wallPoint[1] + vetor[1]]; 
 
         k.createCanvas(1080, 1080);
-        k.background(127, 255, 0);
+        k.background(colors[0]);
         k.strokeWeight(5);
     };
     k.draw = function () {

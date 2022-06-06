@@ -14,9 +14,9 @@ new p5(function (k) {
       toruses[i] = torus;
     }
 
-    k.fill(0);
+    k.fill(colors[1]);
     k.ellipsoid(150);
-    k.fill(127, 255, 0);
+    k.fill(colors[0]);
   }
 
   k.draw = function () {

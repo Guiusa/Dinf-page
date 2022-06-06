@@ -3,10 +3,10 @@ new p5(function (k) {
     k.setup = function () {
         k.createCanvas(1080, 1080);
         k.noStroke();
-        k.fill(127, 255, 0);
+        k.fill(colors[0]);
     };
     k.draw = function () {
-        k.background(0);
+        k.background(colors[1]);
         k.rect(360, 1065, 360, 15);
         let pos = k.map(k.sin(counter/60), 1, -1, 200, 1030);
         let somar = k.map(pos, 200, 1030, 1, 5);

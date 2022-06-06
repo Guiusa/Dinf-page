@@ -3,7 +3,8 @@ new p5(function (k) {
     k.setup = function () {
         k.createCanvas(1080, 1080);
         k.noStroke();
-        k.fill(127, 255, 0);
+        k.background(colors[1]);
+        k.fill(colors[0]);
     }
     k.draw = function () { 
         if(counter%20==0){
@@ -20,7 +21,7 @@ new p5(function (k) {
                     break;
                 case 2:
                     k.strokeWeight(arr[6]);
-                    k.stroke(127, 255, 0);
+                    k.stroke(colors[0]);
                     k.line(arr[0], arr[1], arr[2], arr[3])
                     break;
                 default:
