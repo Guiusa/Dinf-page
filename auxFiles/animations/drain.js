@@ -12,7 +12,7 @@ new p5(function (k) {
     k.draw = function () {
         k.background(colors[0]);
         let radius = k.map(k.cos(counter), -1, 1, 400, 0);
-        rotRect += k.map(radius, 400, 0, 15, 1);
+        rotRect += k.map(radius, 400, 0, 5, 7);
         let size = k.map(radius, 400, 0, 150, 20);
         let x = k.cos(counter*5) * radius;
         let y = k.sin(counter*5) * radius;

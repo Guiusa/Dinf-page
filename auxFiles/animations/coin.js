@@ -10,7 +10,7 @@ new p5(function (k) {
     k.draw = function () {
         k.background(colors[0]);
         let size = k.map(k.cos(counter/10), -1, 1, 150, 350);
-        k.rotateX(counter);
+        k.rotateX(0.5*counter);
         k.rotateY(1.5*counter);
         k.cylinder(size, 30, 24);
         counter++;
